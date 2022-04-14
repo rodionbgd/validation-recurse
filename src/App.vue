@@ -1,28 +1,34 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
-  </div>
+  <the-validation name="validation-1">
+    <the-article>
+      <div>
+        <the-validation name="validation-2"> </the-validation>
+      </div>
+    </the-article>
+    <the-article>
+      <the-validation name="validation-3">
+        <the-validation name="validation-4"></the-validation>
+        <the-validation name="validation-5"></the-validation>
+        <the-article>
+          <the-validation name="validation-6">
+            <the-validation name="validation-7"></the-validation>
+            <the-validation name="validation-8"></the-validation>
+          </the-validation>
+        </the-article>
+      </the-validation>
+    </the-article>
+    <the-validation name="validation-9"></the-validation>
+  </the-validation>
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
-
+import TheValidation from "@/components/TheValidation.vue";
+import TheArticle from "@/components/TheArticle.vue";
 export default {
   name: "App",
   components: {
-    HelloWorld,
+    TheValidation,
+    TheArticle,
   },
 };
 </script>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
